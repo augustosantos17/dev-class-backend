@@ -8,11 +8,14 @@ const options = {
             version: '1.0.0',
             description: 'API para gerenciamento de alunos'
         },
-        servers: [
+        servers: [ 
             {
                 url: 'http://localhost:3000',
                 description: 'Servidor de desenvolvimento'
             }
         ]
-    }
+    },
+    apis: ['./src/routes/*.ts', './src/controllers/*.ts']
 }
+
+export const swaggerSpec = swaggerJSDoc(options);
